@@ -1,0 +1,28 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">Nuevo Producto</button>
+  </div>
+</div>
+<hr />
+<div class="row">
+
+  <div *ngFor="let productid of products" class="col-xs-12">
+
+    <app-product-item 
+    [product]="productid"
+    (productAdded)="recibirItem($event)"
+    >
+    <!--(productSelected)="onProductSelected(product)"
+    (productWasSelected)="selectedProduct =  $event"-->
+
+  </app-product-item>
+
+
+  </div>
+</div>
+
+<!--<button  (click)="irAcarrito()">carrito</button>-->
+ <app-shopping-list [productShop]="productArray" > </app-shopping-list >
+ 

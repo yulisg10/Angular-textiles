@@ -1,0 +1,59 @@
+<div class="container">
+	<h1>Datos del Producto</h1>
+
+		<form  #productForm="ngForm">
+			<div class="form-group">
+				<label for="code">Código</label>
+				<input type="text" class="form-control" id="code" required
+				[(ngModel)]="product.code" name="code"
+				value={{product.code}}/>
+			</div>
+
+			<div class="form-group">
+				<label for="name">Nombre</label>
+				<input type="text" class="form-control" id="name" required
+				[(ngModel)]="product.name" name="name"
+				value={{product.name}}/>
+			</div>
+
+			<div class="form-group">
+				<label for="amount">Cantidad</label>
+				<input type="text" class="form-control" id="amount" required
+				[(ngModel)]="product.amount" name="amount" 
+				value={{product.amount}}/>
+			</div>
+
+			<div class="form-group">
+				<label for="price">Precio</label>
+				<input type="text" class="form-control" id="price" required
+				[(ngModel)]="product.price" name="price" 
+				value={{product.price}}/>
+			</div>
+
+			<div class="form-group">
+				<label for="category">Categoría</label>
+				<input type="text" class="form-control" id="category" required
+				[(ngModel)]="product.category" name="category" 
+				value={{product.category}}/>
+			</div>
+
+			<div class="form-group">
+				<label for="description">Descripción</label>
+				<textarea type="text" class="form-control" id="description" required
+				[(ngModel)]="product.description" name="description"
+				value={{product.description}}> </textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="imagePath">URL Imagen</label>
+				<input type="text" class="form-control" id="imagePath" 
+				[(ngModel)]="product.imagePath" name="imagePath"
+				value={{product.imagePath}}/>
+			</div>
+
+			<button class="btn btn-primary" (click)="save()">Guardar</button>
+			
+		</form>	
+
+  	
+  </div>
